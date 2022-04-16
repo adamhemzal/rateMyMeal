@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Karla", Arial, sans-serif;;
+  font-size: 102%;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 { 
+  line-height: 1.25;
+  /* margin: 2.85rem 0 1.38rem; */
+  font-weight: bold;
+  margin: 1.55rem 0 1.18rem;
+}
+
+h1 {
+  font-size: theme('fontSize.h1');
+  margin-top: 0;
+}
+
+h2 {
+  font-size: theme('fontSize.h2');
+}
+
+h3 {
+  font-size: theme('fontSize.h3');
+}
+
+h4 {
+  font-size: theme('fontSize.h4');
+}
+
+h5 {
+  font-size: theme('fontSize.h5');
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  cursor: pointer;
+}
+
+p {
+  margin: 0.75rem 0 1.25rem;
+}
+
+blockquote, ol, p, table, ul {
+  font-size: theme('fontSize.body');
+}
+
+a {
+  @apply hover:font-bold hover:border-b border-zinc-600;
+}
+
+.active {
+  @apply font-bold;
+}
+
+.button {
+  @apply inline-block px-5 py-1.5 my-4 border border-zinc-500 transition hover:bg-zinc-800 hover:text-white;
+}
+
+input, textarea {
+  @apply border border-zinc-400 py-1 px-3;
+}
