@@ -1,6 +1,7 @@
 //import AWS from "aws-sdk";
 import Amplify, { API, Storage } from "aws-amplify";
 import awsExports from "./aws-exports";
+//import * as mapboxgl from 'mapbox-gl';
 
 Amplify.configure(awsExports);
 
