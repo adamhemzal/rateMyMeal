@@ -66,7 +66,7 @@ function EditMeal() {
 
             setLoading(false);
         }
-        if (user.username == mealUser) {
+        if (user.username === mealUser) {
             getSingleMeal();
         }
         else {

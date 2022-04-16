@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
+
 import * as amplify from '../amplify'; 
 
-function SignUp() {
+function LogIn() {
   // For routing
   let navigate = useNavigate();
   const { route } = useAuthenticator(context => [context.route]);
@@ -13,13 +14,13 @@ function SignUp() {
       navigate("/");
     }
   }, [route])
-
+  
   return (
-    <main className='container py-12 flex flex-col items-center'>
-        <h1>Sign Up</h1>
-        <Authenticator />
+    <main className='container flex flex-col items-center py-12'>
+      <h1>Log In</h1>
+      <Authenticator />
     </main>
   )
 }
 
-export default SignUp;
+export default LogIn;

@@ -1,7 +1,9 @@
+//import AWS from "aws-sdk";
 import Amplify, { API, Storage } from "aws-amplify";
 import awsExports from "./aws-exports";
 
 Amplify.configure(awsExports);
+
 
 /*****************************
  * API: taskListApp - You can find the name in API Gateway

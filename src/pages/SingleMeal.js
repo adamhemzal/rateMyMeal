@@ -162,4 +162,4 @@ function SingleMeal() {
     )
 }
 
-export default SingleMeal
+export default SingleMeal;

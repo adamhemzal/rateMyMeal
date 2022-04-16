@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Layout from './components/Layout';
+import Main from './pages/Main';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import CreateMeal from './pages/CreateMeal';
-import Main from './pages/Main';
 import SingleMeal from './pages/SingleMeal';
 import EditMeal from './pages/EditMeal';
 import AccessDenied from './pages/AccessDenied';
@@ -24,7 +24,7 @@ function App() {
         </Route>
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
