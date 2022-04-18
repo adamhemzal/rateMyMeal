@@ -101,7 +101,7 @@ export async function createRating(userName, mealId, rating, userMealAuthor) {
       rating
     },
   });
-  console.log("new rating", data);
+  //console.log("new rating", data);
   return data;
 };
 
@@ -117,6 +117,18 @@ export async function deleteMeal(userName, mealId) {
   return data;
 };
 
+
+export async function deleteRating(userName, mealId, rating, userMealAuthor) {
+  const path = `/meals/${userMealAuthor}/${mealId}/rating`;
+  const data = await API.del(apiName, path, {
+    body: {
+      userName,
+      rating
+    },
+  });
+  //console.log("delete rating", data);
+  return data;
+};
 
 /*****************************
  * UPDATE

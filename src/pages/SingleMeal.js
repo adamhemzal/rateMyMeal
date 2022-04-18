@@ -34,7 +34,11 @@ function SingleMeal() {
     const createRating = async (e) => {
         e.preventDefault();
         if (existingRating !== undefined && existingRating !== 0 ) {
-            await amplify.updateRating(user.username, mealId, rating, mealUser);
+            if (Number(rating) === 0) {
+                await amplify.deleteRating(user.username, mealId, rating, mealUser);
+            } else {
+                await amplify.updateRating(user.username, mealId, rating, mealUser);
+            }
         }
         else {
            await amplify.createRating(user.username, mealId, rating, mealUser);
